@@ -1,8 +1,13 @@
-import { Box, Typography } from '@mui/material'
-import { motion } from 'framer-motion'
+import { Box, Typography, type TypographyProps } from '@mui/material';
+import { motion, type MotionProps } from 'framer-motion';
+import React from 'react';
 
-const MotionBox = motion(Box)
-const MotionTypography = motion(Typography)
+const MotionBox = motion(Box);
+
+// Tieni solo questa versione tipizzata correttamente per risolvere il problema del "component"
+const MotionTypography = motion(Typography) as React.FC<
+  TypographyProps & MotionProps & { component?: React.ElementType }
+>;
 
 export default function BrandLoader() {
   return (
@@ -272,5 +277,5 @@ export default function BrandLoader() {
         </Box>
       </Box>
     </Box>
-  )
+  );
 }

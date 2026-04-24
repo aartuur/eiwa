@@ -16,7 +16,7 @@ import BrandIntroCard from "./ui/BrandIntroCard";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & { children: React.ReactElement<any, any> },
-  ref: React.Ref<unknown>
+  ref: React.Ref<unknown>,
 ) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -175,61 +175,61 @@ export default function DemoProjectSection() {
             </IconButton>
 
             {step === 0 && (
-  <div className="mx-auto flex min-h-screen max-w-5xl items-center justify-center px-6 py-16">
-    <div className="w-full rounded-[32px] border border-white/10 bg-white/5 p-8 md:p-12 shadow-2xl backdrop-blur-xl">
-      <div className="mb-4 inline-flex rounded-full border border-violet-400/20 bg-violet-500/10 px-4 py-2 text-sm text-violet-200">
-        Esperienza guidata stile stepper
-      </div>
+              <div className="mx-auto flex min-h-screen max-w-5xl items-center justify-center px-6 py-16">
+                <div className="w-full rounded-[32px] border border-white/10 bg-white/5 p-8 md:p-12 shadow-2xl backdrop-blur-xl">
+                  <div className="mb-4 inline-flex rounded-full border border-violet-400/20 bg-violet-500/10 px-4 py-2 text-sm text-violet-200">
+                    Esperienza guidata stile stepper
+                  </div>
 
-      <h3 className="text-4xl md:text-5xl font-black leading-tight">
-        Prima compili pochi dati,
-        <span className="block text-violet-400">
-          poi vedi una demo vera.
-        </span>
-      </h3>
+                  <h3 className="text-4xl md:text-5xl font-black leading-tight">
+                    Prima compili pochi dati,
+                    <span className="block text-violet-400">
+                      poi vedi una demo vera.
+                    </span>
+                  </h3>
 
-      <p className="mt-6 max-w-2xl text-lg text-white/70">
-        Nessuna preview mostrata prima della compilazione. Prima raccogliamo le
-        informazioni essenziali, poi generiamo una demo completa, credibile e
-        molto più utile.
-      </p>
+                  <p className="mt-6 max-w-2xl text-lg text-white/70">
+                    Nessuna preview mostrata prima della compilazione. Prima
+                    raccogliamo le informazioni essenziali, poi generiamo una
+                    demo completa, credibile e molto più utile.
+                  </p>
 
-      <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/70">
-        {[
-          "Pochi campi essenziali",
-          "Default intelligenti",
-          "Demo completa dopo il form",
-          "Tema mantenuto",
-        ].map((item) => (
-          <div
-            key={item}
-            className="rounded-full border border-white/10 bg-white/5 px-4 py-2"
-          >
-            {item}
-          </div>
-        ))}
-      </div>
+                  <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/70">
+                    {[
+                      "Pochi campi essenziali",
+                      "Default intelligenti",
+                      "Demo completa dopo il form",
+                      "Tema mantenuto",
+                    ].map((item) => (
+                      <div
+                        key={item}
+                        className="rounded-full border border-white/10 bg-white/5 px-4 py-2"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
 
-      <div className="mt-10">
-        <Button
-          variant="contained"
-          onClick={() => setStep(1)}
-          endIcon={<ArrowForwardRoundedIcon />}
-          sx={{
-            px: 3,
-            py: 1.4,
-            borderRadius: "999px",
-            textTransform: "none",
-            fontWeight: 700,
-            background: "linear-gradient(135deg,#8b5cf6,#d946ef)",
-          }}
-        >
-          Inizia compilazione
-        </Button>
-      </div>
-    </div>
-  </div>
-)}
+                  <div className="mt-10">
+                    <Button
+                      variant="contained"
+                      onClick={() => setStep(1)}
+                      endIcon={<ArrowForwardRoundedIcon />}
+                      sx={{
+                        px: 3,
+                        py: 1.4,
+                        borderRadius: "999px",
+                        textTransform: "none",
+                        fontWeight: 700,
+                        background: "linear-gradient(135deg,#8b5cf6,#d946ef)",
+                      }}
+                    >
+                      Inizia compilazione
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {step === 1 && (
               <BusinessInfoForm
@@ -244,9 +244,7 @@ export default function DemoProjectSection() {
               <div className="min-h-screen px-4 pb-8 pt-20 md:px-6">
                 <div className="mx-auto mb-6 flex max-w-7xl items-center justify-between gap-4">
                   <div>
-                    <div className="text-sm text-violet-300">
-                      Demo generata
-                    </div>
+                    <div className="text-sm text-violet-300">Demo generata</div>
                     <h3 className="text-3xl font-bold">
                       Ecco come potrebbe apparire il sito
                     </h3>
@@ -272,8 +270,7 @@ export default function DemoProjectSection() {
                       sx={{
                         borderRadius: "999px",
                         textTransform: "none",
-                        background:
-                          "linear-gradient(135deg,#8b5cf6,#d946ef)",
+                        background: "linear-gradient(135deg,#8b5cf6,#d946ef)",
                       }}
                     >
                       Ricomincia
